@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body{
+    background: antiquewhite;
+    font-family: 'open sans';
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tabla{
+    width: 33%;
+    height: 550px;
+    margin: auto;
+    border: 1px solid #343434;
+    border-radius: 4px;
+    padding: 60px;
+    text-align: center;
+    flex-grow: 1;
+    color: #343759;
+}
+ 
+.tabla>h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
