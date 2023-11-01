@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Juwina</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #171717;
+    color: #fff;
+    font-family: 'Krub';
+}
+/* header */
+header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    font-family: 'Oswald';
+}
+header h1{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+header h1 .cuadro{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+header nav ul li{
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+    margin: 0 30px;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #fff;
+    text-transform: uppercase;
+}
+header nav ul li:hover{
+    border-bottom: 3px solid #fff;
+}
+header button{
+    border: none;
+    padding: 3px 10px;
+    text-transform: uppercase;
+    cursor: pointer; 
+}
+/* sección inicio */
+.contenido{
+    max-width: 1100px;
+    margin: auto;
+}
+#inicio .contenido .fila{
+    display: flex;
+}
+#inicio .contenido .fila .col{
+    width: 33%;
+    position: relative;
+}
+#inicio .contenido .fila .ui{
+    font-family: 'Krub';
+    font-size: 120px;
+    display: flex;
+    align-items: baseline;
+}
+#inicio .contenido .fila .ui .circulo{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #a35ff9;
+    border-radius: 12px;
+}
+#inicio .contenido .fila .col .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+#inicio .contenido .fila .col .info h2{
+    width: fit-content;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;    
+}
+#inicio .contenido .fila .col .txt{
+    font-family: 'Krub';
+    font-weight: normal;
+    font-size: 43px;
+}
+.vertical{
+    top: 50%;
+    left: -10%;
+    position: absolute;
+    transform: scale(-1) translate(-50%, 50%);
+    writing-mode: vertical-lr;
+    letter-spacing: 5px;
+}
+.circulo-principal{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -2;
+}
+#inicio .contenido .fila .col img{
+    display: block;
+    width: 370px;
+}
+#inicio .contenido .fila .derecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    font-family: 'Krub';
+}
+#inicio .contenido .fila .derecha h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+#inicio .contenido .fila .derecha p{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-primary{
+    display: inline-block;
+    width: fit-content;
+    background-color: #a35ff9;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    transition: .3s;
+}
+.btn-primary:hover{
+    background-color: #000;
+}
+.btn-secondary{
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+}
+
+
+/* sección sobre mi */
+#sobremi{
+    padding: 50px 10px;
+    height: 90vh;
+}
+#sobremi .contenido .fila{
+    display: flex;
+    align-items: center;
+}
+#sobremi .contenido .fila .col{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.titulo-seccion{
+    font-size: 61px;
+    margin-bottom: 20px;
+}
+.resaltado{
+    color: #a35ff9;
+    font-weight: normal;
+}
+#sobremi .contenido .fila .col > p{
+    font-size: 14px;
+    width: 350px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+#sobremi .contenido .fila .col .skills{
+    margin: 20px 0;
+}
+#sobremi .contenido .fila .col .skills p{
+    margin-right: 40px;
+}
+#sobremi .contenido .fila .col .punto {
+    width: 10px;
+    height: 10px;
+    background-color: #a35ff9;
+    display: inline-block;
+    margin-right: 15px;
+}
+#sobremi .contenido .fila .col .barra-skill{
+    width: 80%;
+    height: 15px;
+    border: 1px solid ;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 30px;
+    position: relative;
+    margin-bottom: 20px;
+}
+#sobremi .contenido .fila .col .barra-skill span{
+    display: inline-block;
+    font-size: 10px;
+    position: relative;
+    text-align: center;
+    bottom: 5px;
+    width: 100%;
+}
+.progreso{
+    background-color: #a35ff9;
+    width: 0;
+}
+/* animaciones */
+.dw{
+    width: 0%;
+    animation: dw 1.5s forwards;
+}
+@keyframes dw{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+/* animación diseño grafico */
+.dg{
+    width: 0%;
+    animation: dg 1.5s forwards;
+}
+@keyframes dg{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+/* animación base de datos */
+.bd{
+    width: 0%;
+    animation: bd 1.5s forwards;
+}
+@keyframes bd{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+/* animación marketing digital */
+.md{
+    width: 0%;
+    animation: md 1.5s forwards;
+}
+@keyframes md{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+#sobremi .contenido .fila .col img{
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    border-radius:10%;
+    overflow: hidden;
+}
+
+/* sección proyectos */
+#proyectos{
+    padding: 50px 10px;
+}
+#proyectos .contenido .fila{
+    display: flex;
+    justify-content: space-between;
+}
+#proyectos .contenido .fila .col{
+    border: 2px solid #fff;
+    padding: 60px 20px 20px 20px;
+    position: relative;
+    text-align: center;
+    width: 250px;
+    margin-bottom: 20px;
+    transition: .5s;
+}
+#proyectos .contenido .fila .col:hover{
+    box-shadow: 0px 0px 20px #a35ff9;
+    transform: scale(1.05);
+}
+#proyectos .contenido .fila .col .numero-proyecto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: .4s;
+}
+#proyectos .contenido .fila .col:hover .numero-proyecto{
+    left: 50%;
+    transform: translateX(-50%);
+}
+#proyectos .contenido .fila .col .titulo-proyecto{
+    letter-spacing: 3px;
+    font-size: 25px;
+}
+#proyectos .contenido .fila .col hr{
+    width: 50px;
+    background-color: #a35ff9;
+    border: none;
+    height: 2px;
+    margin: 20px auto;
+}
+#proyectos .contenido .fila .col p{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* sección NUMEROS */
+#numeros{
+    background-color: #1d1d1d;
+    padding: 50px 10px;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+}
+#numeros .fila{
+    display: flex;
+    justify-content: space-evenly;
+}
+#numeros .fila .col{
+    display: flex;
+    align-items: center;
+}
+#numeros .fila .col .mas{
+    font-size: 40px;
+    color: #a35ff9;
+    display: block;
+}
+#numeros .fila .col .num{
+    width: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 15px 0 0px;
+}
+
+/* sección contacto */
+#contacto{
+    padding: 50px 10px;
+    position: relative;
+    height: 100vh   ;
+}
+#contacto .contenido{
+    display: flex;
+    justify-content: end;
+    text-align: center;
+}
+#contacto form{
+    max-width: 500px;
+    width: 100%;
+}
+#contacto form p{
+    margin-bottom: 30px;
+} 
+#contacto form input,
+#contacto form textarea {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    border: 3px solid #a35ff9;
+    padding: 10px;
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+    outline: none;
+}
+#contacto .img-subs{
+    position: absolute;
+    left: 0;
+    top: 2px;
+    bottom: 20%;
+    max-width: 440px;
+}
+/* footer */
+footer{
+    background-color: #a35ff9;
+    color: #fff;
+    padding: 70px 0;
+    font-size: 18px; 
+    text-align: center;
+}
+footer .contenido{
+    display: flex;
+}
+footer .contenido .col{
+    width: 30%;
+}
+footer .contenido .col3{
+    width: 40%;
+    text-align: right;
+}
+footer .contenido h3{
+    border-bottom: 2px solid #fff;
+    width: fit-content;
+    padding-bottom: 3px;
+}
+footer .contenido ul{
+    list-style: none;
+    margin-top: 20px;
+}
+footer .contenido ul li{
+    margin: 5px 0;
+}
+footer .contenido ul li a{
+   text-decoration: none;
+   color: #fff;
+}
+footer .contenido ul li a:hover{
+    text-decoration: underline;
+ }
+footer .contenido .titulo-footer{
+    text-align: right;
+    width: auto;
+    border-bottom: none;
+}
+footer .contenido input{
+    display: inline-block;
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    border: 2px solid #fff;
+    padding: 10px;
+    color: #fff;
+    margin: 20px 0;
+    outline: none;
+}
+footer .contenido input::placeholder { 
+    color: #fff;
+}
+footer .contenido .redes{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+footer .contenido .redes a{
+    margin: 0 20px;
+    display: block;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #a35ff9;
+    text-align: center;
+    line-height: 40px;
+    transition: .3s;
+}
+footer .contenido .redes a:hover{
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+/* Responsive design */
+@media screen and (max-width:920px){
+    header nav{
+        display: none;
+    }
+    header nav.responsive{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 55px;
+        background-color:#1d1d1d;
+        border: 1px solid #555555;
+        z-index: 10;
+    }
+    header nav.responsive ul{
+        display: block;
+        
+    }
+    #inicio .contenido .fila{
+        display: block;
+    }
+    
+    #inicio .contenido .fila .col{
+        width: 100%;
+        text-align: center;
+    }
+    #inicio .contenido .fila .col .txt{
+        display: none;
+    }
+    #inicio .contenido .fila .col .ui{
+        justify-content: center;
+        font-size: 80px;
+    }
+    #inicio .contenido .fila .col .info{
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+    #inicio .contenido .fila .col .info h2{
+        width: auto;
+        margin: 30px 0;
+        font-size: 30px;
+    }
+    #inicio .contenido .fila .col img{
+        margin: auto;
+        width: 150px;
+    }
+    #inicio .contenido .fila .derecha{
+        padding-left: 0;
+    }
+    .circulo-principal{
+        width: 200px;
+        height: 200px;
+    }
+
+    /* sección sobremi */
+    #sobremi{
+        height: auto;
+    }
+    #sobremi .contenido .fila{
+        display: block;
+    }
+    #sobremi .contenido .fila .col{
+        width: 100%;
+    }
+    #sobremi .contenido .fila .col img{
+        display: none;
+    }
+    #sobremi .contenido .fila .col .circulo-principal{
+        display: none;
+    }
+    #sobremi .contenido .fila .col .barra-skill{
+        width: 90%;
+    }
+    
+    #proyectos .contenido .fila{
+        display: block;
+    }
+    #proyectos .contenido .fila .col{
+        width: 90%;
+        margin: 5px auto;
+    }
+    #clientes .contenido .fila .col .circulo-principal{
+        display: none;
+    }
+    #clientes .contenido .fila .col > img{
+        display: none;
+    }
+    #clientes .contenido .fila{
+        display: block;
+    }
+    #clientes .contenido .fila .col{
+       width: 100%;
+       display: block;
+    }
+    
+    #contacto{
+        height: auto;
+    }
+    #contacto form{
+        max-width: 100%;
+    }
+    #contacto img{
+        display: none;
+    }
+
+    footer .contenido{
+        display: block;
+        text-align: center;
+    }
+    footer .contenido h3{
+        width: 100%;
+        border-bottom: none;
+    }
+    footer .contenido .col{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    footer .contenido .col3{
+        width: 100%;
+        text-align: center;
+    }
+    footer .contenido .titulo-footer{
+        text-align: center;
+    }
+    footer .contenido .col ul{
+        margin-top: 5px;
+    }
+    footer .contenido .redes{
+        justify-content: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- encabezado -->
+    <header>
+        <h1><span class="cuadro"></span>Juwina Palacios</h1>
+        <nav class="" id="nav">
+            <ul>
+                <li>
+                    <a href="#inicio" onclick="abrirCerrarMenu()">Inicio</a>
+                </li>
+                <li>
+                    <a href="#sobremi" onclick="abrirCerrarMenu()">Sobre mí</a>
+                </li>
+                <li>
+                    <a href="#proyectos" onclick="abrirCerrarMenu()">Proyectos</a>
+                </li>
+                <li>
+                    <a href="#contacto" onclick="abrirCerrarMenu()">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+        <button onclick="abrirCerrarMenu()"><i class="fa-solid fa-bars"></i></button>
+    </header>
+    
+    <section id="inicio">
+        <div class="contenido">
+            <div class="fila">
+                <div class="col">
+                    <div class="ui">
+                        Tec<span class="circulo"></span>
+                    </div>
+                    <div class="info">
+                        <h2>Hola soy Juwina <br> graduada en imformatica</h2>
+                    </div>
+                    <div class="vertical txt">
+                        EXPERIENCIA
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="circulo-principal anim1"></div>
+                    <img src="img/img3.jpg" alt="" class="anim2">
+                </div>
+                <div class="col derecha">
+                    <h3>Futura Empresaria</h3>
+                    <p>Hola me llamo Juwina tengo 18 años soy de la isla de Guanaja ya casi graduada en imformatica profecional.</p>
+                    <div class="botones">
+                        <button class="btn-primary">Proyectos</button>
+                        <button class="btn-secondary">Contacto</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sobremi">
+        <div class="contenido">
+            <div class="fila">
+                <div class="col">
+                    <h2 class="titulo-seccion">Mis intereses<span class="resaltado"> y Habilidades</span></h2>
+                    <p>mis intereses son poder una administradora de empresa par tener mi propio megocio y ser una abogada. Mis habilidades son :</p>
+
+                    <div class="skills">
+                        <p> <span class="punto"></span> Desarrollo Web</p>
+                        <div class="barra-skill">
+                            <div class="progreso" id="dw">
+                                <span>80%</span>
+                            </div>
+                        </div>
+
+                        <p> <span class="punto"></span> Diseño Gráfico</p>
+                        <div class="barra-skill">
+                            <div class="progreso" id="dg">
+                                <span>85%</span>
+                            </div>
+                        </div>
+
+                        <p> <span class="punto"></span> Bases de Datos</p>
+                        <div class="barra-skill">
+                            <div class="progreso" id="bd">
+                                <span>95%</span>
+                            </div>
+                        </div>
+
+                        <p> <span class="punto"></span>Marketing Digital</p>
+                        <div class="barra-skill">
+                            <div class="progreso" id="md">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                </div>
+                <div class="col">
+                    <div class="circulo-principal"></div>
+                    <img src="img/Img 1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sección cursos -->
+    <section id="proyectos">
+        <div class="contenido">
+            <h2 class="titulo-seccion">Mis <span class="resaltado"> proyectos</span></h2>
+            <div class="fila">
+                <div class="col">
+                    <div class="numero-curso">
+                        .01
+                    </div>
+                    <h3 class="titulo-curso">
+                        PROYECTO <span class="resaltado">01</span>
+                    </h3>
+                    <div class="proyecto 1">
+                        <a href="C:\Users\Funci\OneDrive\Documentos\proyectos\calculadora\index.html" target="_blank"></a>
+                    </div>
+                    <hr>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, porro sequi dolor adipisci illum necessitatibus ratione.</p>
+                    <button class="btn-primary">Ver</button>
+                </div>
+                <div class="col">
+                    <div class="numero-curso">
+                        .02
+                    </div>
+                    <h3 class="titulo-curso">
+                        PROYECTO <span class="resaltado">02</span>
+                    </h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, porro sequi dolor adipisci illum necessitatibus ratione.</p>
+                    <button class="btn-primary">LEER MÁS</button>
+                </div>
+                <div class="col">
+                    <div class="numero-curso">
+                        .03
+                    </div>
+                    <h3 class="titulo-curso">
+                        PROYECTO <span class="resaltado">03</span>
+                    </h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, porro sequi dolor adipisci illum necessitatibus ratione.</p>
+                    <button class="btn-primary">LEER MÁS</button>
+                </div>
+                <div class="col">
+                    <div class="numero-curso">
+                        .04
+                    </div>
+                    <h3 class="titulo-curso">
+                        PROYECTO <span class="resaltado">04</span>
+                    </h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, porro sequi dolor adipisci illum necessitatibus ratione.</p>
+                    <button class="btn-primary">LEER MÁS</button>
+                </div>
+
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <div class="numero-curso">
+                        .05
+                    </div>
+                    <h3 class="titulo-curso">
+                        PROYECTO <span class="resaltado">05</span>
+                    </h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, porro sequi dolor adipisci illum necessitatibus ratione.</p>
+                    <button class="btn-primary">LEER MÁS</button>
+                </div>
+                <div class="col">
+                    <div class="numero-curso">
+                        .06
+                    </div>
+                    <h3 class="titulo-curso">
+                        PROYECTO <span class="resaltado">06</span>
+                    </h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, porro sequi dolor adipisci illum necessitatibus ratione.</p>
+                    <button class="btn-primary">LEER MÁS</button>
+                </div>
+                <div class="col">
+                    <div class="numero-curso">
+                        .07
+                    </div>
+                    <h3 class="titulo-curso">
+                        PROYECTO <span class="resaltado">07</span>
+                    </h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, porro sequi dolor adipisci illum necessitatibus ratione.</p>
+                    <button class="btn-primary">LEER MÁS</button>
+                </div>
+                <div class="col">
+                    <div class="numero-curso">
+                        .08
+                    </div>
+                    <h3 class="titulo-curso">
+                        PROYECTO <span class="resaltado">08</span>
+                    </h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, porro sequi dolor adipisci illum necessitatibus ratione.</p>
+                    <button class="btn-primary">LEER MÁS</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- numeros -->
+    <section id="numeros">
+        <div class="contenido">
+            <div class="fila">
+                <div class="col">
+                    <span class="mas">+</span>
+                    <div class="num" id="contProyectos">0</div>
+                    <div class="texto">
+                        <strong>PROYECTOS</strong> <br>TERMINADOS
+                    </div>
+                </div>
+                <div class="col">
+                    <span class="mas">+</span>
+                    <div class="num" id="contCursos">0</div>
+                    <div class="texto">
+                        CURSOS <br> <strong>EN LINEA</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <img src="img/img2.jpg" class="img-subs">
+        <div class="contenido">
+            <form action="">
+                <h2 class="titulo-seccion">Contactame <br> <span class="resaltado subir"> ahora mismo</span></h2>
+                <p></p>
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Email">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                <button class="btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+            <div class="col3">
+                <h3 class="titulo-footer">Subscribite para recibir <br> el Boletín de noticias</h3>
+                <input type="text" placeholder="mail">
+                <div class="redes">
+                    <p>Seguime!</p>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        //Funcion que aplica las animaciones de las habilidades
+let proyectos = 0;
+let clientes = 0;
+let cursos =0;
+let intervalProyectos = null;
+let intervalclientes = null;
+let intervalCursos = null;
+function animacionNumeros(){
+    var numeros = document.getElementById("numeros");
+    var distancia_numeros = window.innerHeight - numeros.getBoundingClientRect().top;
+    if(distancia_numeros >= 200 && proyectos ==0){
+        intervalo = setInterval(actualizarContador, 60);
+    }
+}
+
+
+function actualizarContador() {
+    // Verificamos si hemos llegado a 50
+    if (proyectos <= 80) {
+        // Mostramos el valor actual del contador en el elemento con id "contador"
+        document.getElementById("contProyectos").textContent = proyectos;
+        // Incrementamos el contador en 1
+        proyectos++;
+    } else {
+        // Si hemos llegado a 50, detenemos el intervalo
+        clearInterval(intervalProyectos);
+    }
+    
+    
+    // Verificamos si hemos llegado a 40
+    if (cursos <= 20) {
+        // Mostramos el valor actual del contador en el elemento con id "contador"
+        document.getElementById("contCursos").textContent = cursos;
+        // Incrementamos el contador en 1
+        cursos++;
+    } else {
+        // Si hemos llegado a 50, detenemos el intervalo
+        clearInterval(intervalCursos);
+    }
+}
+//detecto el scrolling para aplicar la animacion de la barra de habilidades
+window.onscroll = function(){
+    animacionNumeros();
+    animacionesSkills();
+}
+let visible=false;
+
+function abrirCerrarMenu(){    
+    if(visible==false){
+        document.getElementById("nav").className = "responsive";
+        visible = true;
+    }else{
+        document.getElementById("nav").className = "";
+        visible = false;
+    }
+}
+
+function animacionesSkills(){
+    var skills = document.getElementById("sobremi");
+    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+    if(distancia_skills >= 400){
+        document.getElementById("dw").className = " progreso dw";
+        document.getElementById("dg").className = " progreso dg";
+        document.getElementById("bd").className = " progreso bd";
+        document.getElementById("md").className = " progreso md";
+    }
+}
+    </script>
+</body>
+</html>
